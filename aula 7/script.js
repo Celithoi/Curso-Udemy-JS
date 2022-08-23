@@ -1,5 +1,5 @@
-function ePaisagem(altura, largura){
-    return largura;
+function ePaisagem(largura, altura){
+    return largura>altura ? true: false;
 }
 
-console.log(ePaisagem(1080,1920));
+console.log(ePaisagem(1920,1080));
