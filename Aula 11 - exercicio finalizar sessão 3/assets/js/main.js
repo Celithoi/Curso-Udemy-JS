@@ -20,13 +20,6 @@ const zerar = document.querySelector('.zerar');
 let segundos = 0;
 var timer;
 
-function iniciaRelogio(){
-    timer = setInterval(function(){
-        segundos++;
-        relogio.innerHTML = mostraHora(segundos);
-    },1000);
-    
-}
 
 //###############################################################//
 //################### tambem pode ser feito assim################//
