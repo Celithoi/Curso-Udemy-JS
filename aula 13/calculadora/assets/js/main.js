@@ -3,8 +3,25 @@ function criaCalculadora (){
     display: document.querySelector(`.display`),
 
     inicia(){
+      this.display.focus();
       this.pegaBotao();
-      //this.pegaEnter();
+      this.pegaEnter();
+    },
+
+    fazCalculo(){
+      let conta = this.display.value;
+      try{
+        conta = eval(conta);
+        console.log(conta);
+        if(!conta){
+          alert('conta inválida!')
+          return;
+        }
+        this.display.value = String(conta);
+      }catch (e){
+        alert('conta inválida!');
+        return;
+      }
     },
     
     pegaBotao(){
@@ -24,8 +41,17 @@ function criaCalculadora (){
             this.display.value = this.display.value.slice(0,-1);
           }
           if (elemento.classList.contains(`btn-eq`)){
-            
+            this.fazCalculo();
           }
+          this.display.focus();
+      });
+    },
+
+    pegaEnter(){
+      this.display.addEventListener('keypress', e =>{
+        if (e.keyCode === 13){
+          this.fazCalculo();
+        }
       });
     },
 
