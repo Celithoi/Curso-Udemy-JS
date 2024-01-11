@@ -57,8 +57,6 @@ pin.nome = 'teste';
 Object.freeze(pin); // bloqueia para n haver mudança no objeto
 pin.sobrenome = 'jao'
 
-
-
 console.log(pin)
 
 
