@@ -8,4 +8,4 @@ function zeros (n) {
     return somador
 }
 console.log(zeros(6));  
-console.log(zeros(101));
+console.log(zeros(10100));
