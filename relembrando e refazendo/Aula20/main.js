@@ -21,14 +21,16 @@ function esperaAi(msg, tempo){
 // promise.all promise.race promise.resolve promise.reject
 //
 
-const promise = [
-    //'Primeiro Valor', 
-    esperaAi('Promise1', 3000),
-    esperaAi('Promise2', 500),
-    esperaAi('Promise3', 5000),
-    esperaAi('1000', 3000),
-    //'outro valor'
-];
+// const promise = [
+//     //'Primeiro Valor', 
+//     esperaAi('Promise1', 3000),
+//     esperaAi('Promise2', 500),
+//     esperaAi('Promise3', 5000),
+//     esperaAi('1000', 3000),
+//     //'outro valor'
+// ];
+
+// passa por todas as promises e resolve
 
 // Promise.all(promise).then(function (valor){
 //     console.log(valor);
@@ -36,9 +38,25 @@ const promise = [
 //     console.log(erro)
 // });
 
-Promise.race(promise).then(function (valor){
-    console.log(valor);
-}).catch(function (erro){
-    console.log(erro)
-});
 
+// passa na mais rapida
+
+// Promise.race(promise).then(function (valor){
+//     console.log(valor);
+// }).catch(function (erro){
+//     console.log(erro)
+// });
+
+function baixaPagina() {
+    const emCache = false;
+    if(emCache){
+        return Promise.resolve('pagina em cache')
+    } else {
+        return esperaAi('Pagina baixada', 3000)
+    }
+}
+
+baixaPagina()
+.then(dadosPagina =>
+    { console.log(dadosPagina);})
+.catch(e =>{console.log(e)});
