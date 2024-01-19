@@ -80,19 +80,24 @@ form button:hover {
   background: var(--primary-color-darker);
 }
 
-.container h1 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.cpf-gerado{
+.senha-gerada {
   font-size: 2em;
   color: var(--primary-color);
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 40px;
-  letter-spacing: 5px;
-}`, "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AACA;EACE,iCAAiC;EACjC,sCAAsC;AACxC;;AAEA;EACE,sBAAsB;EACtB,UAAU;AACZ;;AAEA;EACE,SAAS;EACT,UAAU;EACV,gCAAgC;EAChC,oCAAoC;EACpC,gBAAgB;EAChB,kBAAkB;AACpB;;AAEA;EACE,gBAAgB;EAChB,iBAAiB;EACjB,gBAAgB;EAChB,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,cAAc;EACd,WAAW;EACX,mBAAmB;AACrB;;AAEA;EACE,eAAe;EACf,YAAY;EACZ,eAAe;AACjB;;AAEA;EACE,uCAAuC;AACzC;;AAEA;EACE,YAAY;EACZ,gCAAgC;EAChC,WAAW;EACX,eAAe;EACf,gBAAgB;EAChB,YAAY;EACZ,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,uCAAuC;AACzC;;AAEA;EACE,kBAAkB;EAClB,mBAAmB;AACrB;;AAEA;EACE,cAAc;EACd,2BAA2B;EAC3B,kBAAkB;EAClB,iBAAiB;EACjB,mBAAmB;EACnB,mBAAmB;AACrB","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');\n:root {\n  --primary-color: rgb(17, 86, 102);\n  --primary-color-darker: rgb(9, 48, 56);\n}\n\n* {\n  box-sizing: border-box;\n  outline: 0;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  background: var(--primary-color);\n  font-family: 'Open sans', sans-serif;\n  font-size: 1.3em;\n  line-height: 1.5em;\n}\n\n.container {\n  max-width: 640px;\n  margin: 50px auto;\n  background: #fff;\n  padding: 20px;\n  border-radius: 10px;\n}\n\nform input, form label, form button {\n  display: block;\n  width: 100%;\n  margin-bottom: 10px;\n}\n\nform input {\n  font-size: 24px;\n  height: 50px;\n  padding: 0 20px;\n}\n\nform input:focus {\n  outline: 1px solid var(--primary-color);\n}\n\nform button {\n  border: none;\n  background: var(--primary-color);\n  color: #fff;\n  font-size: 18px;\n  font-weight: 700;\n  height: 50px;\n  cursor: pointer;\n  margin-top: 30px;\n}\n\nform button:hover {\n  background: var(--primary-color-darker);\n}\n\n.container h1 {\n  text-align: center;\n  margin-bottom: 40px;\n}\n\n.cpf-gerado{\n  font-size: 2em;\n  color: var(--primary-color);\n  text-align: center;\n  font-weight: bold;\n  margin-bottom: 40px;\n  letter-spacing: 5px;\n}"],"sourceRoot":""}]);
+  margin: 40px 0;
+
+}
+
+input[type="checkbox"]{
+  width: 25px;
+  height: 25px;
+  color: black;
+}
+
+button{
+  display: block;
+  margin: 40px 0;
+  font-size: 1em;
+}`, "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AACA;EACE,iCAAiC;EACjC,sCAAsC;AACxC;;AAEA;EACE,sBAAsB;EACtB,UAAU;AACZ;;AAEA;EACE,SAAS;EACT,UAAU;EACV,gCAAgC;EAChC,oCAAoC;EACpC,gBAAgB;EAChB,kBAAkB;AACpB;;AAEA;EACE,gBAAgB;EAChB,iBAAiB;EACjB,gBAAgB;EAChB,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,cAAc;EACd,WAAW;EACX,mBAAmB;AACrB;;AAEA;EACE,eAAe;EACf,YAAY;EACZ,eAAe;AACjB;;AAEA;EACE,uCAAuC;AACzC;;AAEA;EACE,YAAY;EACZ,gCAAgC;EAChC,WAAW;EACX,eAAe;EACf,gBAAgB;EAChB,YAAY;EACZ,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,uCAAuC;AACzC;;AAEA;EACE,cAAc;EACd,2BAA2B;EAC3B,cAAc;;AAEhB;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,cAAc;EACd,cAAc;EACd,cAAc;AAChB","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');\n:root {\n  --primary-color: rgb(17, 86, 102);\n  --primary-color-darker: rgb(9, 48, 56);\n}\n\n* {\n  box-sizing: border-box;\n  outline: 0;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  background: var(--primary-color);\n  font-family: 'Open sans', sans-serif;\n  font-size: 1.3em;\n  line-height: 1.5em;\n}\n\n.container {\n  max-width: 640px;\n  margin: 50px auto;\n  background: #fff;\n  padding: 20px;\n  border-radius: 10px;\n}\n\nform input, form label, form button {\n  display: block;\n  width: 100%;\n  margin-bottom: 10px;\n}\n\nform input {\n  font-size: 24px;\n  height: 50px;\n  padding: 0 20px;\n}\n\nform input:focus {\n  outline: 1px solid var(--primary-color);\n}\n\nform button {\n  border: none;\n  background: var(--primary-color);\n  color: #fff;\n  font-size: 18px;\n  font-weight: 700;\n  height: 50px;\n  cursor: pointer;\n  margin-top: 30px;\n}\n\nform button:hover {\n  background: var(--primary-color-darker);\n}\n\n.senha-gerada {\n  font-size: 2em;\n  color: var(--primary-color);\n  margin: 40px 0;\n\n}\n\ninput[type=\"checkbox\"]{\n  width: 25px;\n  height: 25px;\n  color: black;\n}\n\nbutton{\n  display: block;\n  margin: 40px 0;\n  font-size: 1em;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -539,99 +544,78 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ "./src/modules/GeraCPF.js":
-/*!********************************!*\
-  !*** ./src/modules/GeraCPF.js ***!
-  \********************************/
+/***/ "./src/modules/formGeraSenha.js":
+/*!**************************************!*\
+  !*** ./src/modules/formGeraSenha.js ***!
+  \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ GeraCPF)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _validaCPF__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./validaCPF */ "./src/modules/validaCPF.js");
+/* harmony import */ var _geradores__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./geradores */ "./src/modules/geradores.js");
 
 
-class GeraCPF{
-    rand(min = 100000000, max = 999999999){
-        return String(Math.floor(Math.random()*(max-min)+min));
-    }
+const senhaGerada = document.querySelector('.senha-gerada');
+const qtdCaracteres = document.querySelector('.qtd-caracteres');
+const chkMaiusculas = document.querySelector('.chk-maiusculas');
+const chkMinusculas = document.querySelector('.chk-minusculas');
+const chkNumeros = document.querySelector('.chk-numeros');
+const chkSimbolos = document.querySelector('.chk-simbolos');
+const gerarSenha = document.querySelector('.gerar-senha');
 
-    formatado(cpf){
-        return (
-            cpf.slice(0,3) + '.' +
-            cpf.slice(3,6) + '.' +
-            cpf.slice(6,9) + '.' +
-            cpf.slice(9,11)
-        );
-    }
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() =>{
+    gerarSenha.addEventListener('click', ()=>{
+        senhaGerada.innerHTML = gera();
+    });
+    
+});
 
-    geraNovoCpf(){
-        const cpfSemDigito = this.rand();
-        const digito1 = _validaCPF__WEBPACK_IMPORTED_MODULE_0__["default"].geraDigito(cpfSemDigito);
-        const digito2 = _validaCPF__WEBPACK_IMPORTED_MODULE_0__["default"].geraDigito(cpfSemDigito + digito1);
-        const novoCpf = cpfSemDigito+digito1+digito2;
-        return this.formatado(novoCpf);
-    }
-}
+function gera(){
+    const senha = (0,_geradores__WEBPACK_IMPORTED_MODULE_0__["default"])(
+        qtdCaracteres.value,
+        chkMaiusculas.checked,
+        chkMinusculas.checked,
+        chkNumeros.checked,
+        chkSimbolos.checked
+    );
+
+    return senha || "nada gerado";
+};
 
 /***/ }),
 
-/***/ "./src/modules/validaCPF.js":
+/***/ "./src/modules/geradores.js":
 /*!**********************************!*\
-  !*** ./src/modules/validaCPF.js ***!
+  !*** ./src/modules/geradores.js ***!
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ ValidaCPF)
+/* harmony export */   "default": () => (/* binding */ geraSenha)
 /* harmony export */ });
-class ValidaCPF {
-    constructor(cpfEnviado) {
-      Object.defineProperty(this, 'cpfLimpo', {
-        writable: false,
-        enumerable: true,
-        configurable: false,
-        value: cpfEnviado.replace(/\D+/g, '')
-      });
-    }
-  
-    eSequencia() {
-      return this.cpfLimpo.charAt(0).repeat(11) === this.cpfLimpo;
-    }
-  
-    geraNovoCpf() {
-      const cpfSemDigitos = this.cpfLimpo.slice(0, -2);
-      const digito1 = ValidaCPF.geraDigito(cpfSemDigitos);
-      const digito2 = ValidaCPF.geraDigito(cpfSemDigitos + digito1);
-      this.novoCPF = cpfSemDigitos + digito1 + digito2;
-    }
-  
-    static geraDigito(cpfSemDigitos) {
-      let total = 0;
-      let reverso = cpfSemDigitos.length + 1;
-  
-      for(let stringNumerica of cpfSemDigitos) {
-        total += reverso * Number(stringNumerica);
-        reverso--;
-      }
-  
-      const digito = 11 - (total % 11);
-      return digito <= 9 ? String(digito) : '0';
-    }
-  
-    valida() {
-      if(!this.cpfLimpo) return false;
-      if(typeof this.cpfLimpo !== 'string') return false;
-      if(this.cpfLimpo.length !== 11) return false;
-      if(this.eSequencia()) return false;
-      this.geraNovoCpf();
-  
-      return this.novoCPF === this.cpfLimpo;
-    }
-  };
+const rand = (min,max) => Math.floor(Math.random() * (max-min)+min);
+const geraMaiuscula = () => String.fromCharCode(rand(65,91));
+const geraMinuscula = () => String.fromCharCode(rand(97,123));
+const geraNumero = () => String.fromCharCode(rand(48,58));
+const geraSimbolos = () => simbolos[rand(0,simbolos.length)];
+const simbolos = ',.^~[]{}!@#$%*()_+=-';
 
+function geraSenha(qtd,maiuscula,minuscula,numero,simbolos){
+    const senhaArray = [];
+    qtd = Number(qtd);
+    for(let i=0; i < qtd; i++){
+        maiuscula && senhaArray.push(geraMaiuscula());
+        minuscula && senhaArray.push(geraMinuscula());
+        numero && senhaArray.push(geraNumero());
+        simbolos && senhaArray.push(geraSimbolos()); 
+                
+    }
+
+    return senhaArray.join('').slice(0,qtd);
+}
 
 
 /***/ })
@@ -716,16 +700,12 @@ var __webpack_exports__ = {};
   !*** ./src/main.js ***!
   \*********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_GeraCPF__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/GeraCPF */ "./src/modules/GeraCPF.js");
+/* harmony import */ var _modules_formGeraSenha__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/formGeraSenha */ "./src/modules/formGeraSenha.js");
 /* harmony import */ var _assets_css_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/css/style.css */ "./src/assets/css/style.css");
 
 
+(0,_modules_formGeraSenha__WEBPACK_IMPORTED_MODULE_0__["default"])();
 
-(function() {
-    const gera = new _modules_GeraCPF__WEBPACK_IMPORTED_MODULE_0__["default"]();
-    const cpfGerado = document.querySelector('.cpf-gerado')
-    cpfGerado.innerHTML = gera.geraNovoCpf();
-})();
 })();
 
 /******/ })()
