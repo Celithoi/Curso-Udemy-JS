@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":";;;;;AAAAA,OAAO,CAACC,GAAG,CAAC,OAAO,CAAC;AACpBC,KAAK,CAAC,WAAW,CAAC,C","sources":["webpack://aula24webpack/./src/index.js"],"sourcesContent":["console.log('teste')\r\nalert('ola mundo')"],"names":["console","log","alert"],"sourceRoot":""}
