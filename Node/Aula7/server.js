@@ -1,18 +1,10 @@
 const express = require('express');
 const app = express();
 
-//         CRIAR,   Ler,  Atualizar, apagar  
+// /profile/12345?campanha=googleads&nome_campanha=seila
+// profile do usuario / numero do usuario 
+// / campanha = google ADS  E nome_campanha = seila 
 
-//CRUD -> CREATE , READ , UPDATE, DELETE;
-
-//         POST,  GET ,   PUT,    DELETE;
- 
-
-//http://meusite.com/ <- GET -> entregue a pagina / ou raiz.
-
-// http://meusite.com/sobre <- GET -> entregue a pagina /sobre
-
-// caminho , função(requisição,resposta)
 app.get('/', (req,res) =>{
     res.send(`
     <form action ="/" method="POST">
@@ -21,7 +13,12 @@ app.get('/', (req,res) =>{
     </form>    
     `);
 });
-// 
+//
+app.get('/testes/:idUsuarios?/:parametros?',(req,res)=>{
+    console.log(req.params);
+    //res.send(req.params.idUsuarios);
+    res.send(req.params);
+}); 
 app.post('/',(req,res) => {
     res.send('recebi o formalrio')
 });
