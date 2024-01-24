@@ -14,13 +14,19 @@ app.get('/', (req,res) =>{
     `);
 });
 //
+app.use(
+    express.urlencoded({extended:true})
+)
+
 app.get('/testes/:idUsuarios?/:parametros?',(req,res)=>{
-    console.log(req.params);
+    console.log(req.params); // http://www.site.com.br/profile/3 ou 4 ou 5 
+    console.log(req.query) // http://www.site.com.br/profiles/?chave1=valor&chave2=valor
     //res.send(req.params.idUsuarios);
     res.send(req.params);
 }); 
 app.post('/',(req,res) => {
-    res.send('recebi o formalrio')
+    console.log(req.body);
+    res.send(`o que você me enviou foi? ${req.body.nome}`)
 });
 
 app.get('/contato',(reg,res) => 
