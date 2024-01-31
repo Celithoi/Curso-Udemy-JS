@@ -1,0 +1,12 @@
+<% Controle de fluxo (if,for,...)%>
+<%= imprime escando caracteres %>
+<%- imprime sem escapar caracteres%>
+<%# comentario%>
+<%- include('./caminho/arquivo')%>
+
+<% if(typeof titulo != 'undefined'){ %>
+    <%= exibe alguma coisa %>
+    <% }else {%>
+    <%= exibe outra coisa %>
+<% } %>
+          
