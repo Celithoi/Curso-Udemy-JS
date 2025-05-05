@@ -12,6 +12,7 @@ export default function Login() {
       <Paragrafo>
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Paragrafo>
+      <button type="button">Enviar</button>
     </Container>
   );
 }
