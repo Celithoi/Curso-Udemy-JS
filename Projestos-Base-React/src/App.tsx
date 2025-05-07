@@ -1,17 +1,19 @@
-import { BrowserRouter } from 'react-router-dom';
+import { unstable_HistoryRouter as HistoryRouter } from 'react-router-dom';
+
+import type { History as RouterHistoryType } from '@remix-run/router';
+import { appHistory } from './services/history';
+
 import GlobalStyles from './styles/GlobalStyles';
 import Header from './components/Header';
-import Routes from './routes';
+import RoutesComponent from './routes';
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Header />
-        <Routes />
-        <GlobalStyles />
-      </BrowserRouter>
-    </>
+    <HistoryRouter history={appHistory as unknown as RouterHistoryType}>
+      <Header />
+      <RoutesComponent /> {/* Seu componente que usa <Routes> e <Route> */}
+      <GlobalStyles />
+    </HistoryRouter>
   );
 }
 
