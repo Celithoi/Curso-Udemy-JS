@@ -14,9 +14,9 @@ export default function RoutesApp() {
         path="1" //O caminho da rota
         element={
           // O que renderizar para este caminho
-          <MyRoute component={Route} isClosed /> // A página a ser renderizada se autorizado
+          <MyRoute component={Route} isClosed={false} /> // A página a ser renderizada se autorizado
         }
-      />{' '}
+      />
       {/*Indica que esta rota requer autorização*/}
     </Routes>
   );

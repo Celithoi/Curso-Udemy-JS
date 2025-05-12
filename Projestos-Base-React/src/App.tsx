@@ -1,4 +1,5 @@
 import { unstable_HistoryRouter as HistoryRouter } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 
 import type { History as RouterHistoryType } from '@remix-run/router';
 import { appHistory } from './services/history';
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <RoutesComponent /> {/* Seu componente que usa <Routes> e <Route> */}
       <GlobalStyles />
+      <ToastContainer autoClose={3000} className="toast-container" />
     </HistoryRouter>
   );
 }
