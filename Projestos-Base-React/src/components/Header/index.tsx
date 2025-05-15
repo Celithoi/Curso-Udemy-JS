@@ -1,9 +1,13 @@
 import { FaHome, FaSignInAlt, FaUserAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import type { RootState } from '../../store';
 
 import { Nav } from './styled';
 
 export default function Header() {
+  const botaoClicado = useSelector((state: RootState) => state.botaoClicado);
+
   return (
     <Nav>
       <Link to="/">
@@ -15,6 +19,7 @@ export default function Header() {
       <Link to="A">
         <FaUserAlt size={24} />
       </Link>
+      {botaoClicado ? 'Clicado' : 'Não Clicado'}
     </Nav>
   );
 }
