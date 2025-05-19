@@ -21,7 +21,7 @@ export default function Login() {
 
   function handleClick(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
-    dispatch(exampleActions.ClicaBotao());
+    dispatch(exampleActions.ClicaBotaoRequest());
   }
 
   return (
