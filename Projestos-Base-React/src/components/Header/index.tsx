@@ -6,7 +6,9 @@ import type { RootState } from '../../store';
 import { Nav } from './styled';
 
 export default function Header() {
-  const botaoClicado = useSelector((state: RootState) => state.botaoClicado);
+  const botaoClicado = useSelector(
+    (state: RootState) => state.example.botaoClicado
+  );
 
   return (
     <Nav>
