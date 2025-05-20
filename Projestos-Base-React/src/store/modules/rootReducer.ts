@@ -8,5 +8,5 @@ const rootReducer = combineReducers({
   // Adicione outras chaves e reducers aqui conforme necessário
 });
 
-export type RootStateForTyping = ReturnType<typeof rootReducer>; // Opcional, mas útil para tipar fora do store.ts
+export type RootState = ReturnType<typeof rootReducer>; // Opcional, mas útil para tipar fora do store.ts
 export default rootReducer;

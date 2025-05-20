@@ -1,13 +1,13 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { call, put, all, takeLatest } from 'redux-saga/effects';
+import { toast } from 'react-toastify';
 import * as actions from './actions.ts';
 import * as types from '../types.ts';
 
 const requisicao = (): Promise<void> =>
-  new Promise<void>((resolve, reject) => {
+  new Promise<void>((resolve) => {
     setTimeout(() => {
       resolve();
-    }, 2000);
+    }, 600);
   });
 
 function* exampleRequestSaga() {
@@ -24,6 +24,7 @@ function* exampleRequestSaga() {
       'Saga: Erro na requisição, despachando ClicaBotaoFailure...',
       error
     );
+    toast.error('Deu ruin');
     // CORREÇÃO AQUI: Chame o action creator
     // Você pode passar o erro como payload se seu action creator aceitar
     yield put(actions.ClicaBotaoFailure());
