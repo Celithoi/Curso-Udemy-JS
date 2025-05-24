@@ -28,6 +28,12 @@ button{
   padding: 10px 20px;
   border-radius: 4px;
   font-weight: 700;
+  transition: all 300ms;
+}
+
+button:hover{
+  filter: brightness(75%)
+
 }
 
 a {
@@ -41,10 +47,35 @@ ul{
 
 body .Toastify .Toastify__toast-container .Toastify__toast--success{
   background: ${colors.successColor};
+  color: #fff;
 }
 
-body .Toastify .Toastify__toast-container .Toastify__toast--error{
-  background: ${colors.errorColor};
+/* Para esconder o ícone padrão dos toasts de erro */
+body .Toastify .Toastify__toast-container .Toastify__toast--success .Toastify__toast-icon,
+body .Toastify .Toastify__toast-container .Toastify__toast--success svg {
+  display: none !important;
+}
+
+/* Para esconder o ícone padrão dos toasts de erro */
+body .Toastify .Toastify__toast-container .Toastify__toast--success .Toastify__toast-icon,
+body .Toastify .Toastify__toast-container .Toastify__toast--success svg {
+  display: none !important;
+}
+
+body .Toastify .Toastify__toast-container .Toastify__toast--error {
+  background: ${colors.errorColor}; /* Exemplo de cor de erro */
+  color: #fff;
+}
+
+/* Para esconder o ícone padrão dos toasts de erro */
+body .Toastify .Toastify__toast-container .Toastify__toast--error .Toastify__toast-icon,
+body .Toastify .Toastify__toast-container .Toastify__toast--error svg {
+  display: none !important;
+}
+
+/* Para mudar a cor da barra de progresso dos toasts de erro */
+body .Toastify .Toastify__toast-container .Toastify__toast--error .Toastify__progress-bar {
+  background: #fff !important;
 }
 
 `;

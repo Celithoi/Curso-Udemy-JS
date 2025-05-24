@@ -12,9 +12,9 @@ export default (reducers: Reducer<RootState, UnknownAction>) => {
     persistReducer(
       // Usamos a FUNÇÃO persistReducer importada
       {
-        key: 'REACT-BASE',
+        key: 'CONSUMO-API',
         storage,
-        whitelist: ['example'], // Se whitelist for vazio, e não houver blacklist, todos os reducers são persistidos.
+        whitelist: ['auth'], // Se whitelist for vazio, e não houver blacklist, todos os reducers são persistidos.
         // Se quiser persistir APENAS alguns, coloque os nomes deles aqui, ex: ['auth', 'user']
       },
       reducers // Passamos o parâmetro 'reducers' (que agora está tipado)
