@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { RootState } from '../store/modules/rootReducer';
 
 interface MyRouteProps {
   component: React.ElementType;
@@ -13,7 +15,7 @@ export default function MyRoute({
   isClosed,
   ...rest
 }: MyRouteProps) {
-  const isLoggedIn = false;
+  const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
   const location = useLocation();
 
   if (isClosed && !isLoggedIn) {

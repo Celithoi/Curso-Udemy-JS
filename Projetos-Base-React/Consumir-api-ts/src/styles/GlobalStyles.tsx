@@ -10,14 +10,27 @@ export default createGlobalStyle`
   box-sizing: border-box;
 }
 
+#root {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+  }
+
 body{
   font-family: sans-serif;
   background: ${colors.primaryDarkColor};
   color: ${colors.primaryDarkColor};
+
 }
 
-html,body, #root{
-  height: 100%;
+html,body{
+  width: 100%;
+  height: 100%; /* Essencial para que #root possa usar height: 100% */
+  overflow-x: hidden;
+
 }
 
 button{
@@ -81,7 +94,7 @@ body .Toastify .Toastify__toast-container .Toastify__toast--error .Toastify__pro
 `;
 
 export const Container = styled.section`
-  max-width: 480px;
+  max-width: 700px;
   background: #fff;
   margin: 30px;
   padding: 30px;
