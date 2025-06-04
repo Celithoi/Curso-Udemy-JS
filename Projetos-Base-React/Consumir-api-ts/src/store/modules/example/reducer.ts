@@ -16,7 +16,6 @@ const exampleReducer = (
 ): ExampleState => {
   switch (action.type) {
     case types.BOTAO_CLICADO_SUCCESS: {
-      console.log('Sucesso');
       return {
         ...state,
         botaoClicado: !state.botaoClicado,
@@ -24,12 +23,10 @@ const exampleReducer = (
     }
 
     case types.BOTAO_CLICADO_FAILURE: {
-      console.log('Deu erro');
       return state;
     }
 
     case types.BOTAO_CLICADO_REQUEST: {
-      console.log('estou fazendo uma requisição');
       return state;
     }
 

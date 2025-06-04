@@ -100,12 +100,12 @@ const exampleReducer = (
       newState.isLoading = true;
       newState.token = action.payload.token;
       newState.user = action.payload.user;
+      newState.isLoggedIn = true; // Define isLoggedIn como true após o login'
       newState.isLoading = false;
       return newState;
     }
     case types.LOGIN_FAILURE: {
-      const newState = { ...state };
-      newState.isLoading = false;
+      const newState = { ...initialState };
       return newState;
     }
     case types.LOGIN_REQUEST: {

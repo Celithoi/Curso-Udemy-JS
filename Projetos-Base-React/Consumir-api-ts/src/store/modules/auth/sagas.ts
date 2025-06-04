@@ -100,7 +100,13 @@ function* registerRequest(action: RegisterRequestAction) {
     }
   } catch (e) {
     const errors = get(e, 'response.data.error', []);
-    //const status = get(e, 'response.status', 0);
+    const status = Number(get(e, 'response.status', 0));
+
+    if (status === 401) {
+      toast.error('Usuário ou senha inválidos.');
+      yield put(actions.loginFailure());
+      return appHistory.push('/login');
+    }
 
     if (errors.length > 0) {
       errors.map((error) => toast.error(error));

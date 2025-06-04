@@ -12,12 +12,7 @@ const requisicao = (): Promise<void> =>
 
 function* exampleRequestSaga() {
   try {
-    console.log('Saga: Iniciando exampleRequestSaga...');
     yield call(requisicao); // Chama a função que retorna a Promise
-    console.log(
-      'Saga: Requisição bem-sucedida, despachando ClicaBotaoSuccess...'
-    );
-    // CORREÇÃO AQUI: Chame o action creator para obter o objeto da ação
     yield put(actions.ClicaBotaoSuccess());
   } catch (error) {
     console.error(
