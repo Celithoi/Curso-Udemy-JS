@@ -64,7 +64,56 @@ function* persistRehydrateSaga(action: PersistRehydrateAction): Generator {
   yield;
 }
 
+interface RegisterRequestSagaPayload {
+  id?: string | number;
+  nome: string;
+  email: string;
+  password?: string;
+}
+
+// Defina a interface para a AÇÃO completa que a saga registerRequest espera
+interface RegisterRequestAction extends Action {
+  type: typeof types.REGISTER_REQUEST; // O tipo da ação
+  payload: RegisterRequestSagaPayload; // O payload com a estrutura correta
+}
+
+function* registerRequest(action: RegisterRequestAction) {
+  const { id, nome, email, password } = action.payload;
+  try {
+    if (id) {
+      yield call(axios.put, '/users', {
+        email,
+        nome,
+        password: password || undefined,
+      });
+      toast.success('Conta alterada com sucesso');
+      yield put(actions.registerSuccess({ nome, email, password }));
+    } else {
+      yield call(axios.post, '/users', {
+        email,
+        nome,
+        password: password,
+      });
+      toast.success('Conta Criada com Sucesso!');
+      yield put(actions.registerSuccess({ nome, email, password }));
+      appHistory.push('/login');
+    }
+  } catch (e) {
+    const errors = get(e, 'response.data.error', []);
+    //const status = get(e, 'response.status', 0);
+
+    if (errors.length > 0) {
+      errors.map((error) => toast.error(error));
+    } else {
+      toast.error('Erro desconhecido');
+    }
+
+    yield put(actions.registerFailure());
+  }
+}
+
 export default all([
   takeLatest(types.LOGIN_REQUEST, loginRequest),
   takeLatest(types.PERSIST_REHYDRATE, persistRehydrateSaga),
+  takeLatest(types.REGISTER_REQUEST, registerRequest),
 ]);

@@ -4,6 +4,7 @@ import type { History as RouterHistoryType } from '@remix-run/router';
 import { appHistory } from './services/history';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
+
 import store, { persistor } from './store';
 import GlobalStyles from './styles/GlobalStyles';
 import Header from './components/Header';

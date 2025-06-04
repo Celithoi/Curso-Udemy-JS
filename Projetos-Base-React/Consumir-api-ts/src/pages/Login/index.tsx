@@ -1,21 +1,22 @@
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 import { isEmail } from 'validator';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { get } from 'lodash';
 
 import { Container } from '../../styles/GlobalStyles';
 import { Form } from './styled';
 import * as actions from '../../store/modules/auth/actions';
+import Loading from '../../components/Loading';
 
-// interface LoginLocationState {
-//   from?: {
-//     // 'from' pode não existir se o usuário navegar diretamente para /login
-//     pathname?: string;
-//     // Você pode adicionar outras propriedades do objeto Location se precisar delas
-//   };
-// }
+type estado = {
+  auth: AuthState;
+};
+
+type AuthState = {
+  isLoading: boolean;
+};
 
 export default function Login() {
   const dispatch = useDispatch();
@@ -23,6 +24,7 @@ export default function Login() {
   const prevPath = get(location, 'state.from.pathname', '/');
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
+  const isLoading = useSelector((state: estado) => state.auth.isLoading);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -47,6 +49,7 @@ export default function Login() {
 
   return (
     <Container>
+      <Loading isLoading={isLoading} />
       <h1>Login</h1>
       <Form onSubmit={handleSubmit}>
         <input
