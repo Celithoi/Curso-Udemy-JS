@@ -11,6 +11,9 @@ import { isAxiosError } from 'axios';
 import { get } from 'lodash';
 import { useDispatch } from 'react-redux';
 import * as actions from '../../store/modules/auth/actions';
+import { ProfilePicture, Title } from './styled';
+import { FaEdit, FaUserCircle } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 export default function Aluno() {
   const dispatch = useDispatch();
@@ -20,6 +23,7 @@ export default function Aluno() {
   const [email, setEmail] = useState('');
   const [idade, setIdade] = useState('');
   const [peso, setPeso] = useState('');
+  const [foto, setFoto] = useState('');
   const [altura, setAltura] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
@@ -30,6 +34,7 @@ export default function Aluno() {
         setIsLoading(true);
         const { data } = await axios.get(`/alunos/${id}`);
         const Foto = get(data, 'Fotos[0].url', '');
+        setFoto(Foto);
         setNome(data.nome);
         setSobrenome(data.sobrenome);
         setEmail(data.email);
@@ -68,7 +73,15 @@ export default function Aluno() {
   return (
     <Container>
       <Loading isLoading={isLoading}></Loading>
-      <h1>{id ? 'Editar Aluno' : 'Novo Aluno'}</h1>
+      <Title>{id ? 'Editar Aluno' : 'Novo Aluno'}</Title>
+      {id && (
+        <ProfilePicture>
+          {foto ? <img src={foto} alt={nome} /> : <FaUserCircle size={180} />}
+          <Link to={`/fotos/${id}`}>
+            <FaEdit size={24} />
+          </Link>
+        </ProfilePicture>
+      )}
       <Form
         onSubmit={async (e) => {
           e.preventDefault();
