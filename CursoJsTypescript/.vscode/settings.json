@@ -1,0 +1,51 @@
+{
+  "window.zoomLevel": 1,
+  "editor.fontSize": 14,
+  "debug.console.fontSize": 14,
+  "terminal.integrated.fontSize": 14,
+  "files.eol": "\n",
+  "workbench.editor.labelFormat": "short",
+  "editor.tabSize": 2,
+  // 🛠 Formatação e Lint
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[svg]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "code-runner.executorMap": {
+    "javascript": "node",
+    "typescript": "npx ts-node --files --transpile-only"
+  },
+  // ==========================
+  // 🔠 SPELL CHECK (CSpell)
+  // ==========================
+  "cSpell.language": "en,pt,pt-BR", // Perfeito, mantém os idiomas que você usa.
+  "cSpell.ignorePaths": [
+    "node_modules",
+    "package.json",
+    "package-lock.json",
+    "yarn.lock",
+    ".gitignore",
+    "*.svg"
+  ],
+  "cSpell.ignoreRegExpList": [
+    // Ignora todo o conteúdo entre aspas simples, duplas ou crases
+    "/(['\"`])(?:\\\\.|(?!\\1)[^\\\\])*?\\1/g"
+  ],
+  "cSpell.words": ["esbenp"]
+}

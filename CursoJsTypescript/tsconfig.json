@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // Compatível com navegadores modernos e Node.js
+    "lib": ["DOM", "DOM.Iterable", "ESNext"], // Suporte completo para React e recursos modernos
+    "module": "NodeNext", // Compatível com ESM (ECMAScript Modules)
+    "moduleResolution": "NodeNext",
+    "allowJs": false, // Evita misturar JS com TS (boa prática)
+    "jsx": "react-jsx", // React 17+ (com JSX automático)
+    "esModuleInterop": true, // Suporte a imports padrão de libs CommonJS
+    "forceConsistentCasingInFileNames": true, // Evita bugs de import em sistemas case-sensitive
+    "strict": true, // Ativa todas as verificações rigorosas
+    "skipLibCheck": true, // Ignora verificação de tipos de bibliotecas externas
+    "resolveJsonModule": true, // Permite importar JSONs direto nos arquivos
+    "isolatedModules": true, // Obrigatório para o JSX automático do React
+    "noEmit": true // Não gera arquivos JS ao compilar (útil no dev)
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
