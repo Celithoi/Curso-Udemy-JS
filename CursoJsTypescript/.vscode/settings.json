@@ -44,8 +44,8 @@
     "*.svg"
   ],
   "cSpell.ignoreRegExpList": [
-    // Ignora todo o conteúdo entre aspas simples, duplas ou crases
-    "/(['\"`])(?:\\\\.|(?!\\1)[^\\\\])*?\\1/g"
+    // Ignora todo o conteúdo entre aspas simples, duplas ou crases, e comentários
+    "(['\"`])(?:\\\\.|(?!\\1)[^\\\\])*?\\1|//.*|/\\*[\\s\\S]*?\\*/"
   ],
   "cSpell.words": ["esbenp"]
 }
