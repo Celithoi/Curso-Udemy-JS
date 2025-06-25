@@ -11,8 +11,8 @@
     "strict": true, // Ativa todas as verificações rigorosas
     "skipLibCheck": true, // Ignora verificação de tipos de bibliotecas externas
     "resolveJsonModule": true, // Permite importar JSONs direto nos arquivos
-    "isolatedModules": true // Obrigatório para o JSX automático do React
-
+    "isolatedModules": true, // Obrigatório para o JSX automático do React
+    "outDir": "./frondEnd/assets/js"
     //"noEmit": true // Não gera arquivos JS ao compilar (útil no dev)
   },
   "include": ["src"],
